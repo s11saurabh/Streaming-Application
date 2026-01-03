@@ -1,11 +1,23 @@
 services:
   - type: web
     name: video-platform-backend
-    env: node
-    buildCommand: npm install
-    startCommand: npm run dev
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: UPLOAD_PATH
+        value: /app/uploads
+      - key: MAX_FILE_SIZE
+        value: 524288000
+      - key: FRONTEND_URL
+        sync: false
