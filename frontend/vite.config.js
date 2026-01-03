@@ -5,10 +5,23 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    open: true
+    proxy: {
+      '/api': {
+        target: process.env.VITE_API_URL || 'http://localhost:5001',
+        changeOrigin: true
+      }
+    }
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          gsap: ['gsap']
+        }
+      }
+    }
   }
 });
