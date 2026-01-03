@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Install system dependencies
-apt-get update
-apt-get install -y ffmpeg
+# Render free tier doesn't allow apt-get
+# FFmpeg will be installed via environment setup
 
 # Install npm dependencies
 npm install
