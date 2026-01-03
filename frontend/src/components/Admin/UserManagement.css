@@ -1,0 +1,149 @@
+.user-management {
+    padding: var(--spacing-xl);
+  }
+  
+  .management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .management-header h2 {
+    margin: 0;
+  }
+  
+  .users-table-container {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .users-table thead {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .users-table th {
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .users-table td {
+    color: var(--text-secondary);
+  }
+  
+  .users-table tbody tr {
+    transition: background-color var(--transition-base);
+  }
+  
+  .users-table tbody tr:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .role-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .role-viewer {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--info-color);
+  }
+  
+  .role-editor {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+  }
+  
+  .role-admin {
+    background-color: rgba(236, 72, 153, 0.1);
+    color: var(--secondary-color);
+  }
+  
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .status-badge.active {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+  }
+  
+  .status-badge.inactive {
+    background-color: rgba(107, 114, 128, 0.1);
+    color: var(--text-tertiary);
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  
+  .btn-icon {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+    cursor: pointer;
+  }
+  
+  .btn-icon:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  .btn-icon.btn-danger:hover {
+    color: var(--error-color);
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .modal-actions button {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .users-table-container {
+      overflow-x: auto;
+    }
+  
+    .users-table {
+      min-width: 800px;
+    }
+  
+    .management-header {
+      flex-direction: column;
+      gap: var(--spacing-md);
+      align-items: stretch;
+    }
+  }

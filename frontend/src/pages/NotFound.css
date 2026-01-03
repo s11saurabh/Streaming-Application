@@ -1,0 +1,94 @@
+.not-found-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    padding: var(--spacing-xl);
+  }
+  
+  .not-found-content {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .not-found-icon {
+    font-size: 6rem;
+    color: white;
+    margin-bottom: var(--spacing-lg);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .not-found-content h1 {
+    font-size: 8rem;
+    color: white;
+    margin-bottom: var(--spacing-md);
+    font-weight: 900;
+    line-height: 1;
+  }
+  
+  .not-found-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .not-found-content p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-2xl);
+    line-height: 1.6;
+  }
+  
+  .not-found-content .btn {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .not-found-content .btn:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .not-found-content h1 {
+      font-size: 5rem;
+    }
+  
+    .not-found-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .not-found-icon {
+      font-size: 4rem;
+    }
+  }
+  ```
+  
+  ---
+  
+  ## **117. .gitignore**
+  ```
+  node_modules/
+  dist/
+  build/
+  .env
+  .env.local
+  .env.development.local
+  .env.test.local
+  .env.production.local
+  logs/
+  *.log
+  npm-debug.log*
+  yarn-debug.log*
+  yarn-error.log*
+  .DS_Store
+  .idea/
+  .vscode/
+  *.swp
+  *.swo
+  *~
+  coverage/
+  .nyc_output/
+  uploads/

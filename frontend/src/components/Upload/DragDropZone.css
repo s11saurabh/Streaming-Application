@@ -1,0 +1,45 @@
+.drag-drop-zone {
+    border: 3px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background-color: var(--bg-tertiary);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .drag-drop-zone:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.05);
+  }
+  
+  .drag-drop-zone.dragging {
+    border-color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .upload-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .drag-drop-zone h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+  }
+  
+  .drag-drop-zone p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .file-types {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+  }

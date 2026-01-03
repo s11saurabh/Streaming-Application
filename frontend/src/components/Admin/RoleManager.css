@@ -1,0 +1,119 @@
+.role-manager {
+    padding: var(--spacing-xl);
+  }
+  
+  .role-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .header-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .role-header h2 {
+    margin: 0;
+  }
+  
+  .role-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    font-size: 1.125rem;
+  }
+  
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+  }
+  
+  .role-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    border-top-width: 4px;
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+  
+  .role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .role-card-header {
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .role-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .role-card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .role-card-body {
+    padding: var(--spacing-xl);
+  }
+  
+  .role-card-body h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.5px;
+  }
+  
+  .permissions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .permissions-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    position: relative;
+    padding-left: var(--spacing-lg);
+  }
+  
+  .permissions-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+  }
+  
+  .role-card-footer {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .roles-grid {
+      grid-template-columns: 1fr;
+    }
+  }

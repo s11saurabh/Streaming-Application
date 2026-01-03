@@ -1,0 +1,56 @@
+.notification {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-md);
+    animation: slideInRight 0.3s ease-out;
+  }
+  
+  .notification-success {
+    border-left-color: var(--success-color);
+  }
+  
+  .notification-error {
+    border-left-color: var(--error-color);
+  }
+  
+  .notification-warning {
+    border-left-color: var(--warning-color);
+  }
+  
+  .notification-info {
+    border-left-color: var(--info-color);
+  }
+  
+  .notification-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-success .notification-icon { color: var(--success-color); }
+  .notification-error .notification-icon { color: var(--error-color); }
+  .notification-warning .notification-icon { color: var(--warning-color); }
+  .notification-info .notification-icon { color: var(--info-color); }
+  
+  .notification-message {
+    flex: 1;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+  }
+  
+  .notification-close {
+    background: none;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    padding: var(--spacing-xs);
+    transition: color var(--transition-base);
+  }
+  
+  .notification-close:hover {
+    color: var(--text-primary);
+  }

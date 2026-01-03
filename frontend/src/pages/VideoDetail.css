@@ -1,0 +1,209 @@
+.video-detail-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .video-detail-main {
+    display: flex;
+    flex: 1;
+    margin-top: 70px;
+  }
+  
+  .video-detail-content {
+    flex: 1;
+    background-color: var(--bg-primary);
+    min-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .video-detail-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl);
+  }
+  
+  .video-player-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .video-placeholder {
+    aspect-ratio: 16 / 9;
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+  }
+  
+  .placeholder-content {
+    text-align: center;
+    padding: var(--spacing-2xl);
+  }
+  
+  .placeholder-icon {
+    font-size: 4rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-lg);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .placeholder-content h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .placeholder-content p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .processing-status {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .processing-status .progress-bar {
+    height: 8px;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .processing-status .progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: width var(--transition-base);
+  }
+  
+  .processing-status span {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+  
+  .video-info-section {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    border: 1px solid var(--border-color);
+  }
+  
+  .video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .video-title-area {
+    flex: 1;
+  }
+  
+  .video-title-area h1 {
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+  }
+  
+  .video-actions {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+  
+  .btn-danger {
+    border-color: var(--error-color);
+    color: var(--error-color);
+  }
+  
+  .btn-danger:hover {
+    background-color: var(--error-color);
+    color: white;
+  }
+  
+  .video-description {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .video-description h3 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.25rem;
+  }
+  
+  .video-description p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .video-metadata h3 {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.25rem;
+  }
+  
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .metadata-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+  }
+  
+  .metadata-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0.25rem;
+  }
+  
+  .metadata-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .metadata-label {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+  
+  .metadata-value {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .video-detail-main {
+      flex-direction: column;
+    }
+  
+    .video-detail-container {
+      padding: var(--spacing-lg);
+    }
+  
+    .video-header {
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+  
+    .video-actions {
+      width: 100%;
+    }
+  
+    .video-actions button {
+      flex: 1;
+    }
+  
+    .metadata-grid {
+      grid-template-columns: 1fr;
+    }
+  }
